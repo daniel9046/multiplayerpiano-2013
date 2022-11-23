@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<title>Multiplayer Piano</title>
+		<meta name="description" content="Let's grab 200 friends and try to play the piano!"/>
+		<link rel="stylesheet" href="screen.css"/>
+	</head>
+	<body>
+
+		<div id="social">
+			<br/>
+			<span id="links">
+				<a class="link" href="http://www.reddit.com/r/multiplayerpiano">reddit</a> &nbsp; 
+				<a class="link" href="http://youtube.com/multiplayerpiano">youtube</a> &nbsp; 
+			</span>
+		</div>
+
+		<div id="names">
+		</div>
+
+		<div id="chat">
+			<ul></ul>
+			<input placeholder="You can chat with this thing." class="translate" maxlength="512"/>
+		</div>
+
+		<div id="piano"></div>
+
+		<noscript>
+			<center><a href="http://www.enable-javascript.com/" class="link">Enable Javascript</a> or this won't do anything...!<br/><br/><br/>- Aristotle</center>
+		</noscript>
+
+		<div id="bottom">
+			<div class="relative">
+				<div id="room">
+					<div class="info"></div>
+					<div class="expand"></div>
+					<div class="more">
+						<div class="new translate">New Room...</div>
+					</div>
+				</div>
+				<div id="new-room-btn" class="ugly-button translate">New Room...</div>
+				<div id="midi-btn" class="ugly-button translate">MIDI...</div>
+				<div id="status"></div>
+				<div id="volume"></div>
+				<div id="transport"></div>
+				<div id="banner">
+					<noscript>
+						<center>
+							<a href="http://www.linode.com/?r=96553d6eb38ac937be34e162a2420e14035d5c4a" style="text-decoration:none;color:white">Proudly hosted on a <span class="link">Linode</span> VPS</a>
+						</center>
+					</noscript>
+				</div>
+				<div id="quota">
+					<div class="value"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal">
+			<div class="bg"></div>
+			<div id="new-room" class="dialog">
+				<p><input type="text" name="name" placeholder="room name" class="text translate"/></p>
+				<p><input type="checkbox" name="visible" class="checkbox translate" checked>Visible (open to everyone)</p>
+				<p><input type="checkbox" name="chat" class="checkbox translate" checked>Enable chat</p>
+				<button class="submit">go</button>
+			</div>
+			<div id="rename" class="dialog">
+				<p><input type="text" name="name" placeholder="My Fancy New Name" maxlength="40" class="text"/></p>
+				<button class="submit">RENAME</button>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="midibridge-0.5.3.min.js"></script>
+		<script src="NoteQuota.js"></script>
+		<script src="script.js"></script>
+
+
+	</body>
+</html>
